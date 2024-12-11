@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <b4x_version>7.00</b4x_version>
+  <dependsOn>jcore</dependsOn>
+  <dependsOn>jfx</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>json</dependsOn>
+  
+  <dependsOn>C:\Users\joao\Google Drive\B4J adicional\zqlabelsdk</dependsOn>
+  
+  <class>
+    <name>zqlabelsdk</name>
+    <shortname>zqlabel</shortname>
+
+    <method>
+      <name DesignerName="prn_Connect">_prn_Connect</name>
+      <returntype>Boolean</returntype>
+      <parameter>
+        <name>strAddr</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

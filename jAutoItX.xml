@@ -1,0 +1,3186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.jmon.jautoitx.jAutoItX</name>
+        <shortname>jAutoItX</shortname>
+        <comment>The AutoItX Class:
+AutoIt is a very useful automation scripting language for Microsoft Windows. It allows for GUI automation using a very simple syntax and can be useful for testing Windows applications. It is packaged with AutoItX which supports accessing AutoIt functions through COM objects.
+This is the port of AutoItX to B4J.
+26 constants
+143 methods
+AutoIt Website: &lt;LINK&gt;http://www.autoitscript.com/&lt;/LINK&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>winGetProcess</name>
+            <comment>Retrieves the Process ID (PID) associated with a window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:The PID, otherwise returns "".</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewBoolean</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>command</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>option</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>option2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pixelGetColor</name>
+            <comment>Returns a pixel color according to x,y pixel coordinates.
+x: x coordinate of pixel.
+y: y coordinate of pixel.
+Return type: @return:Decimal value of pixel's color.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>processSetPriority</name>
+            <comment>Changes the priority of a process
+process: The name or PID of the process to check.
+priority: A flag which determines what priority to set
+ &lt;br/&gt;    0 - Idle/Low
+ &lt;br/&gt;    1 - Below Normal (Not supported on Windows 95/98/ME)
+ &lt;br/&gt;    2 - Normal
+ &lt;br/&gt;    3 - Above Normal (Not supported on Windows 95/98/ME)
+ &lt;br/&gt;    4 - High
+ &lt;br/&gt;    5 - Realtime (Use with caution, may make the system unstable)
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>process</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>priority</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ControlSetText</name>
+            <comment>Sets text of a control.
+ Sends a string of characters to a control.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: The new text to be set into the control.
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlDisable</name>
+            <comment>Disables or "grays-out" a control.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseDown</name>
+            <comment>Perform a mouse down event at the current mouse position.
+button: The button to click: "left", "right", "middle", "main",
+               "menu", "primary", "secondary".</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>button</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize an instance of AutoitX.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>controlCommandCurrentTab</name>
+            <comment>Returns the current Tab shown of a SysTabControl32.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the current Tab shown of a SysTabControl32</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewSelectClear</name>
+            <comment>Clears the selection of all items.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlMove</name>
+            <comment>Moves a control within a window.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+x: X coordinate to move to.
+y: Y coordinate to move to.
+width: New width of the window.
+height: New height of the window.
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetState</name>
+            <comment>Retrieves the state of a given window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns a value indicating the state of the window.
+ Multiple values are added together so use BitAND() to examine the part
+ you are interested in:
+ &lt;br/&gt;1 =  Window exists
+ &lt;br/&gt;2 = Window is visible
+ &lt;br/&gt;4 = Windows is enabled
+ &lt;br/&gt;8 = Window is active
+ &lt;br/&gt;16 = Window is minimized
+ &lt;br/&gt;otherwise returns 0 and sets oAutoIt.error to 1 if the window is not found.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandShowDropdown</name>
+            <comment>Drops a ComboBox
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winActivate</name>
+            <comment>Activates (gives focus to) a window.
+title: The title of the window to activate.
+text: The text of the window to activate.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>driveMapDelete</name>
+            <comment>Disconnects a network drive.
+device: The device to disconnect, e.g. "O:" or "LPT1:".
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>device</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winSetTrans</name>
+            <comment>Sets the transparency of a window. (Windows 2000/XP or later)
+title: The title of the window to affect.
+text: The text of the window to affect.
+transparency: A number in the range 0 - 255. The larger the number,
+                     the more transparent the window will become.
+Return type: @return:True on success, false on failure. .error() will be set to 1
+ if the function isn't supported on an OS.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>transparency</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandGetCurrentSelection</name>
+            <comment>Sets selection according to string in a ListBox or ComboBox
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+charLength: The char size.
+Return type: @return:The current selection.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>charLength</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winWait</name>
+            <comment>Pauses execution of the script until the requested window exists.
+ The script polls for window match every 250 milliseconds or so.
+title: The title of the window to check.
+text: The text of the window to check.
+timeout: Timeout in seconds
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewSelectAll</name>
+            <comment>Selects all items.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+from: The start index.
+to: The end index.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>to</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandTabRight</name>
+            <comment>Moves to the next tab to the right of a SysTabControl32
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isAdmin</name>
+            <comment>Checks if the current user has administrator privileges.
+Return type: @return:True if is admin, false otherwise.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>winSetState</name>
+            <comment>Shows, hides, minimizes, maximizes, or restores a window.
+title: The title of the window to affect.
+text: The text of the window to affect.
+flag: The "show" flag of the executed program:
+ &lt;br/&gt;SW_HIDE = Hide window,
+ &lt;br/&gt;SW_SHOW = Shows a previously hidden window,
+ &lt;br/&gt;SW_MINIMIZE = Minimize window,
+ &lt;br/&gt;SW_MAXIMIZE = Maximize window,
+ &lt;br/&gt;SW_RESTORE = Undoes a window minimization or maximization.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseWheel</name>
+            <comment>Moves the mouse wheel up or down. NT/2000/XP ONLY.
+direction: "up" or "down"
+clicks: The number of times to move the wheel. Default is 1.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>clicks</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>iniWrite</name>
+            <comment>Writes a value to a standard format .ini file.
+filename: The filename of the .ini file.
+section: The section name in the .ini file.
+key: The key name in the in the .ini file.
+value: The value to write/change.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>section</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetText</name>
+            <comment>Retrieves text from a control.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:Text from a control.
+ If fails, sets .error() to 1 and returns a blank string of "".</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>driveMapGet</name>
+            <comment>The device (drive or printer) letter to query. Eg. "O:" or "LPT1:"
+device: The device to disconnect, e.g. "O:" or "LPT1:".
+Return type: @return:Details of the mapping, e.g. \\server\share. If blank, sets .error() to 1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>device</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetPosWidth</name>
+            <comment>Retrieves the position and size of a control relative to it's window.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:The width of the control. Otherwise sets .error() to 1.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetSelectedArray</name>
+            <comment>Returns a string containing the item index of selected items.
+ If option=0 (default) only the first selected item is returned.
+ If option=1 then all the selected items are returned delimited by |,
+ e.g: "0|3|4|10". If no items are selected a blank "" string is returned.
+ If no items are selected a blank "" string is returned.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns a string containing the item index of selected items.
+ If option=0 (default) only the first selected item is returned.
+ If option=1 then all the selected items are returned delimited by |,
+ e.g: "0|3|4|10". If no items are selected a blank "" string is returned.</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewSelectViewChange</name>
+            <comment>Changes the current view. Valid views are "list", "details", "smallicons",
+ "largeicons".
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+view: Valid views are "list", "details", "smallicons", "largeicons".</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetPosWidth</name>
+            <comment>Retrieves the position and size of a given window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the width of the window. Otherwise returns 1 and sets
+ error() = 1</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlEnable</name>
+            <comment>Enables a "grayed-out" control.
+ &lt;br/&gt;&lt;b&gt;Use with caution.&lt;/b&gt;
+ &lt;br/&gt;
+ When using a control name in the Control functions, you need to add a
+ number to the end of the name to indicate which control. For example,
+ if there two controls listed called "MDIClient", you would refer to
+ these as "MDIClient1" and "MDIClient2".
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewExpand</name>
+            <comment>Expands an item to show its children.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to expand</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandEditPaste</name>
+            <comment>Pastes the 'string' at the Edits caret position.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: The string.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseUp</name>
+            <comment>Perform a mouse up event at the current mouse position.
+button: The button to click: "left", "right", "middle", "main",
+               "menu", "primary", "secondary".</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>button</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetFocus</name>
+            <comment>Returns the ControlRef# of the control that has keyboard focus within
+ a specified window.
+title: Title of window to check.
+text: Text from window to check.
+Return type: @return:ControlRef# of the control that has keyboard focus within a
+ specified window. Otherwise returns a blank string and sets .error()
+ to 1 if window is not found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseGetPosY</name>
+            <comment>Retrieves the current Y position of the mouse cursor.
+Return type: @return:The current Y position of the mouse cursor.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>controlShow</name>
+            <comment>Shows a control that was hidden.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseGetPosX</name>
+            <comment>Retrieves the current X position of the mouse cursor.
+Return type: @return:The current X position of the mouse cursor.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>controlTreeViewCheck</name>
+            <comment>Checks an item (if the item supports it).
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to check</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winMinimizeAllUndo</name>
+            <comment>Undoes a previous WinMinimizeAll function.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>winKill</name>
+            <comment>Forces a window to close.
+title: The title of the window.
+text: The text of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetCaretPosX</name>
+            <comment>Returns the coordinates of the caret in the foreground window
+Return type: @return:The coordinates of the caret in the foreground window</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>controlCommandDeleteString</name>
+            <comment>Deletes a string according to occurrence in a ListBox or ComboBox.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+occurrance: The occurrance.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>occurrance</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewGetSelectedItemIndex</name>
+            <comment>Returns the item reference of the current selection using the index reference of the item.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:The item reference of the current selection using the index reference of the item.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetCaretPosY</name>
+            <comment>Returns the coordinates of the caret in the foreground window
+Return type: @return:The coordinates of the caret in the foreground window</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>controlGetHandle</name>
+            <comment>Retrieves the internal handle of a control.
+title: The title of the window to read.
+text: The text of the window to read.
+controlID: The control to interact with.
+Return type: @return:Returns a string containing the control handle value.
+ Otherwise returns "" (blank string) and sets oAutoIt.error to 1
+ if no window matches the criteria.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetSelected</name>
+            <comment>Returns a string containing the item index of selected items.
+ If option=0 (default) only the first selected item is returned.
+ If option=1 then all the selected items are returned delimited by |,
+ e.g: "0|3|4|10". If no items are selected a blank "" string is returned.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns a string containing the item index of selected items.
+ If option=0 (default) only the first selected item is returned.
+ If option=1 then all the selected items are returned delimited by |,
+ e.g: "0|3|4|10". If no items are selected a blank "" string is returned.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlSend</name>
+            <comment>Sends a string of characters to a control.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: String of characters to send to the control.
+sendRawKeys: If true, text contains special characters like +
+                    to indicate SHIFT and {LEFT} to indicate left arrow.
+                    If false, text is sent raw.
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>sendRawKeys</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>blockInput</name>
+            <comment>Disable/enable the mouse and keyboard.
+ Requires admin rights in Vista and Windows 7.
+disableInput: True = disable user input, false = re-enable it.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>disableInput</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandCheck</name>
+            <comment>Checks radio or check Button
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandHideDropDown</name>
+            <comment>Undrops a ComboBox
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sleep</name>
+            <comment>Pause script execution.
+delay: Amount of time to pause (in milliseconds).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>delay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pixelSearch</name>
+            <comment>Searches a rectangle of pixels for the pixel color provided.
+left: left coordinate of rectangle.
+top: top coordinate of rectangle.
+right: right coordinate of rectangle.
+bottom: bottom coordinate of rectangle.
+color: Color value of pixel to find (in decimal or hex).
+shadeVariation: A number between 0 and 255 to indicate the allowed
+                       number of shades of variation of the red, green,
+                       and blue components of the colour.
+                       Default is 0 (exact match).
+step: Instead of searching each pixel use a value larger than 1
+             to skip pixels (for speed). E.g. A value of 2 will only
+             check every other pixel. Default is 1.
+Return type: @return:The pixel's coordinates in a 2 element array, otherwise sets
+ .error() to one.</comment>
+            <returntype>long[]</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bottom</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>shadeVariation</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>step</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winMinimizeAll</name>
+            <comment>Minimizes all windows.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>controlVariant</name>
+            <comment></comment>
+            <returntype>com.jacob.com.Variant</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>function</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pixelChecksum</name>
+            <comment>Generates a checksum for a region of pixels.
+left: Left coordinate of rectangle.
+top: Top coordinate of rectangle.
+right: Right coordinate of rectangle.
+bottom: Bottom coordinate of rectangle.
+step: Instead of checksumming each pixel use a value larger than
+             1 to skip pixels (for speed). E.g. A value of 2 will only
+             check every other pixel. Default is 1.
+Return type: @return:The checksum value of the region.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bottom</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>step</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlBool</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>function</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseClick</name>
+            <comment>Perform a mouse click operation.
+button: The button to click: "left", "right", "middle", "main",
+               "menu", "primary", "secondary".
+x: The x/y coordinates to move the mouse to.
+          If no x and y coords are given, the current position is used.
+y: The x/y coordinates to move the mouse to.
+          If no x and y coords are given, the current position is used.
+clicks: The number of times to click the mouse. Default is 1.
+speed: The speed to move the mouse in the range 1 (fastest) to 100 (slowest).
+ A speed of 0 will move the mouse instantly. Default speed is 10.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>button</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>clicks</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>speed</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetText</name>
+            <comment>Returns the text of a given item/subitem.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The text of an item.
+subitem: The text of a subitem.
+Return type: @return:Returns the text of a given item/subitem.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>subitem</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setOption</name>
+            <comment>Changes the operation of various AutoIt functions/parameters.
+option: The option to change.
+param: The parameter (varies by option).
+Return type: @return:Value of the previous setting.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>option</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>param</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winSetTitle</name>
+            <comment>Changes the title of a window.
+title: The title of the window to affect.
+text: The text of the window to affect.
+newtitle: The new title to give to the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>newtitle</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseGetCursor</name>
+            <comment>Returns a cursor ID Number of the current Mouse Cursor.
+Return type: @return:0 = UNKNOWN (this includes pointing and grabbing hand icons)
+ &lt;br/&gt; 1 = APPSTARTING
+ &lt;br/&gt; 2 = ARROW
+ &lt;br/&gt; 3 = CROSS
+ &lt;br/&gt; 4 = HELP
+ &lt;br/&gt; 5 = IBEAM
+ &lt;br/&gt; 6 = ICON
+ &lt;br/&gt; 7 = NO
+ &lt;br/&gt; 8 = SIZE
+ &lt;br/&gt; 9 = SIZEALL
+ &lt;br/&gt; 10 = SIZENESW
+ &lt;br/&gt; 11 = SIZENS
+ &lt;br/&gt; 12 = SIZENWSE
+ &lt;br/&gt; 13 = SIZEWE
+ &lt;br/&gt; 14 = UPARROW
+ &lt;br/&gt; 15 = WAIT</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>driveMapAdd</name>
+            <comment>Maps a network drive.
+ &lt;p&gt;&lt;b&gt;Doesn't always work&lt;/b&gt;&lt;/p&gt;
+device: The device to map, for example "O:" or "LPT1:". If you
+               pass a blank string for this parameter a connection is made but not
+               mapped to a specific drive. If you specify "*" an unused drive letter
+               will be automatically selected.
+remote: The remote share to connect to in the form "\\server\share".
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>device</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>remote</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewIsSelected</name>
+            <comment>Returns 1 if the item is selected, otherwise returns 0.
+ Returns the text of a given item/subitem.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The text of an item.
+Return type: @return:Returns 1 if the item is selected, otherwise returns 0.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regDeleteKey</name>
+            <comment>Deletes a key from the registry.
+keyname: The registry key to write to.
+Return type: @return:Success: Returns 1. Special: Returns 0 if the key does not exist.
+ Failure: Returns 2 if error deleting key.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewGetText</name>
+            <comment>GetText
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to get
+Return type: @return:The the text of an item.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewSelectInvert</name>
+            <comment>Inverts the current selection.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regWrite</name>
+            <comment>Creates a key or value in the registry.
+keyname: The registry key to write to. If no other parameters are
+                specified this key will simply be created.
+valueName: The valuename to write to.
+type: Type of key to write: "REG_SZ", "REG_MULTI_SZ", "REG_EXPAND_SZ",
+             "REG_DWORD", or "REG_BINARY".
+value: The value to write.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>valueName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetPosY</name>
+            <comment>Retrieves the position and size of a control relative to it's window.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:The Y coordinate of the control.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewSelect</name>
+            <comment>Selects an item.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to select</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetPosX</name>
+            <comment>Retrieves the position and size of a control relative to it's window.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:The X coordinate of the control.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>function</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetSelectedCount</name>
+            <comment>Returns the number of items that are selected.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the number of items that are selected.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetTitle</name>
+            <comment>Retrieves the full title from a window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:A string containing the complete window title. Otherwise "".</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandIsChecked</name>
+            <comment>Checks whether a control is checked.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if is checked.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewFindItem</name>
+            <comment>Returns the item index of the string. Returns -1 if the string is not found.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: String to find
+subitem: The SubItem
+Return type: @return:Returns the item index of the string. Returns -1 if the string is not found.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>subitem</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetItemCount</name>
+            <comment>Returns the number of list items.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the number of list items.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlHide</name>
+            <comment>Hides a control.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winMenuSelectItem</name>
+            <comment>Invokes a menu item of a window.
+title: The title of the window to read.
+text: The text of the window to read.
+item: Text of Menu Item
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>run</name>
+            <comment>Runs an external program.
+filename: The name of the executable (EXE, BAT, COM, or PIF) to run.
+workingDirectory: The working directory.
+flag: The "show" flag of the executed program:
+ &lt;br/&gt;SW_HIDE = Hidden window
+ &lt;br/&gt;SW_MINIMIZE = Minimized window
+ &lt;br/&gt;SW_MAXIMIZE = Maximized window
+Return type: @return:The PID of the process that was launched. After running the
+ requested program the script continues. To pause execution of the script
+ until the spawned program has finished use the RunWait function instead.
+ The error property is set to 1 as an indication of failure.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>workingDirectory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>iniRead</name>
+            <comment>Reads a value from a standard format .ini file.
+filename: The filename of the .ini file.
+section: The section name in the .ini file.
+key: The key name in the in the .ini file.
+defaultVal: The default value to return if the requested key is not found.
+Return type: @return:The requested key value if found, otherwise the default value.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>section</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>defaultVal</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>processClose</name>
+            <comment>Terminates a named process.
+process: The title or PID of the process to terminate.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>process</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetText</name>
+            <comment>Retrieves up to 64KB of text from a window.
+ &lt;p&gt;WinGetText works on minimized windows, but only works on hidden windows
+ if you've set AutoItSetOption("WinDetectHiddenText", 1)
+ If multiple windows match the criteria for WinGetText, the information
+ for the most recently active match is returned.
+ Use WinGetText("") to get the active window's text.&lt;/p&gt;
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns a string containing up to 64k of the window text read.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetClientSizeHeight</name>
+            <comment>Retrieves the size of a given window's client area.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the height of the window's client area, else returns 1
+ and sets .error() =1;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewCollapse</name>
+            <comment>Collapses an item to hide its children.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to check</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>processWait</name>
+            <comment>Pauses script execution until a given process exists.
+process: The name of the process to check.
+timeout: Specifies how long to wait (default is to wait indefinitely).
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>process</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlFocus</name>
+            <comment>Sets input focus to a given control on a window.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winSetOnTop</name>
+            <comment>Change a window's "Always On Top" attribute.
+title: The title of the window to affect.
+text: The text of the window to affect.
+isTopMost: Determines whether the window should have the "TOPMOST" flag set.
+ true=set on top flag, false = remove on top flag</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>isTopMost</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlClick</name>
+            <comment>Sends a mouse click command to a given control.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+button: The button to click, "left", "right" or "middle".
+               Default is the left button.
+clicks: The number of times to click the mouse. Default is center.
+x: The x position to click within the control. Default is center.
+y: The y position to click within the control. Default is center.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>button</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>clicks</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regEnumVal</name>
+            <comment>Reads the name of a value according to it's instance.
+keyname: The registry key to read.
+instance: The 1-based key instance to retrieve.
+Return type: @return:Success: Returns the requested subkey name. Otherwise Returns ""
+ and sets the .error() flag,  1 if unable to open requested key, -1 if
+ unable to retrieve requested subkey (key instance out of range)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>instance</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewIsChecked</name>
+            <comment>Returns the state of an item. 1:checked, 0:unchecked, -1:not a checkbox.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the state of an item. 1:checked, 0:unchecked, -1:not a checkbox.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetClassList</name>
+            <comment>Retrieves the classes from a window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:A string containing the window classes read, otherwise returns
+ empty string and sets .error() to 1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>iniDelete</name>
+            <comment>Deletes a value from a standard format .ini file.
+filename: The filename of the .ini file.
+section: The section name in the .ini file.
+key: The key name in the in the .ini file.
+            If no key name is given the entire section is deleted.
+Return type: @return:True if success, false otherwise</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>section</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewGetItemCount</name>
+            <comment>Returns the number of children for a selected item.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to check
+Return type: @return:The number of children for a selected item.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winMove</name>
+            <comment>Moves and/or resizes a window.
+title: The title of the window to move/resize.
+text: The text of the window to move/resize.
+x: X coordinate to move to.
+y: Y coordinate to move to.
+width: New width of the window.
+height: New height of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clipGet</name>
+            <comment>Retrieves text from the clipboard.
+Return type: @return:A string containing the text on the clipboard. Sets error to 1
+ if clipboard is empty or contains a non-text entry.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>winActive</name>
+            <comment>Checks to see if a specified window exists and is currently active.
+title: The title of the window to activate.
+text: The text of the window to activate.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cdTray</name>
+            <comment>Opens or closes the CD tray.
+drive: The drive letter of the CD tray to control, in the format D:, E:, etc.
+status: Specifies if you want the CD tray to be open or closed: "open" or "closed"
+Return type: @return:True if success, false if drive is locked via CD burning
+ software or if the drive letter is not a CD drive.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>drive</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>status</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlInt</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>function</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>autoItSetOption</name>
+            <comment>Changes the operation of various AutoIt functions/parameters.
+option: The option to change.
+param: The parameter (varies by option).
+Return type: @return:Value of the previous setting.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>option</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>param</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regDeleteVal</name>
+            <comment>Deletes a value from the registry.
+keyname: The registry key to write to.
+Return type: @return:Success: Returns 1. Special: Returns 0 if the key does not exist.
+ Failure: Returns 2 if error deleting key.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>processExists</name>
+            <comment>Checks to see if a specified process exists.
+process: The name or PID of the process to check.
+Return type: @return:The PID of the process. 0 if process does not exist.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>process</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandFindString</name>
+            <comment>Returns occurrence ref of the exact string in a ListBox or ComboBox.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: The string.
+Return type: @return:Returns occurrence ref of the exact string in a ListBox or ComboBox.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetClientSizeWidth</name>
+            <comment>Retrieves the size of a given window's client area.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the width of the window's client area, else returns 1
+ and sets .error() =1;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>send</name>
+            <comment>Sends simulated keystrokes to the active window.
+keys: The sequence of keys to send.
+isRaw: Changes how "keys" is processed:
+ true -  Text contains special characters like + and ! to indicate SHIFT
+ and ALT key presses. false, keys are sent raw.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>keys</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>isRaw</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>shutdown</name>
+            <comment>Shuts down the system.
+code: The shutdown code is a combination of the following values:
+ &lt;br/&gt;0 = Logoff
+ &lt;br/&gt;1 = Shutdown
+ &lt;br/&gt;2 = Reboot
+ &lt;br/&gt;4 = Force
+ &lt;br/&gt;8 = Power down
+ Add the required values together. To shutdown and power down,
+ for example, the code would be 9 (shutdown + power down = 1 + 8 = 9).
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>code</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winWaitClose</name>
+            <comment>Pauses execution of the script until the requested window does not exist.
+title: The title of the window to check.
+text: The text of the window to check.
+timeout: The timeout in seconds.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>runWait</name>
+            <comment>Runs an external program and pauses script execution until the program finishes.
+filename: The name of the executable (EXE, BAT, COM, PIF) to run.
+workingDirectory: The working directory.
+flag: The "show" flag of the executed program:
+ &lt;br/&gt;            SW_HIDE = Hidden window
+ &lt;br/&gt;            SW_MINIMIZE = Minimized window
+ &lt;br/&gt;            SW_MAXIMIZE = Maximized window
+Return type: @return:Returns the exit code of the program that was run.
+ The error property is set to 1 as an indication of failure.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>workingDirectory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewGetSubItemCount</name>
+            <comment>Returns the number of subitems.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the number of subitems.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandAddString</name>
+            <comment>Adds a string to the end in a ListBox or ComboBox
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: The string.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandGetSelected</name>
+            <comment>Returns selected text of an Edit.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+charLength: The length to get.
+Return type: @return:The selected text.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>charLength</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewGetSelectedItemText</name>
+            <comment>Returns the item reference of the current selection using the text reference of the item.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:The item reference of the current selection using the text reference of the item.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetPosX</name>
+            <comment>Retrieves the position and size of a given window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the X coordinate of the window. Otherwise returns 1 and
+ sets .error() = 1</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetPosY</name>
+            <comment>Retrieves the position and size of a given window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the Y coordinate of the window. Otherwise returns 1 and
+ sets .error() = 1</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandGetCurrentLine</name>
+            <comment>Returns the line # where the caret is in an Edit
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the line # where the caret is in an Edit</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winClose</name>
+            <comment>Closes a window.
+title: The title of the window to activate.
+text: The text of the window to activate.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clipPut</name>
+            <comment>Writes text to the clipboard.
+value: The text to write to the clipboard.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlGetPosHeight</name>
+            <comment>Retrieves the position and size of a control relative to it's window.
+title: The title of the window to access.
+text: The text of the window to access.
+controlID: The control to interact with.
+Return type: @return:Returns the height of the control.
+ Otherwise returns the Y coordinate of the control.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>controlID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>statusbarGetText</name>
+            <comment>Retrieves the text from a standard status bar control.
+title: The title of the window to check.
+text: The text of the window to check.
+part: The "part" number of the status bar to read
+             the default is 1. 1 is the first possible part and usually
+             the one that contains the useful messages like "Ready" "Loading...", etc.
+Return type: @return:The text from a standard status bar control.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>processWaitClose</name>
+            <comment>Pauses script execution until a given process exists.
+process: The name of the process to check.
+timeout: Specifies how long to wait (default is to wait indefinitely).
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>process</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winWaitNoActive</name>
+            <comment>Pauses execution of the script until the requested window is not active.
+title: The title of the window to check.
+text: The text of the window to check.
+timeout: The timeout in seconds.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseClickDrag</name>
+            <comment>Perform a mouse click and drag operation.
+button: The button to click: "left", "right", "middle",
+               "main", "menu", "primary", "secondary".
+x: The x/y coords to start the drag operation from.
+y: The x/y coords to start the drag operation from.
+x2: The x/y coords to start the drag operation to.
+y2: The x/y coords to start the drag operation to.
+speed: The speed to move the mouse in the range 1 (fastest) to
+ 100 (slowest). A speed of 0 will move the mouse instantly. Default speed is 10.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>button</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>speed</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandGetLineCount</name>
+            <comment>Returns the column # where the caret is in an Edit
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the line # where the caret is in an Edit</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regEnumKey</name>
+            <comment>Reads the name of a subkey according to it's instance.
+keyname: The registry key to read.
+instance: The 1-based key instance to retrieve.
+Return type: @return:Success: Returns the requested subkey name. Otherwise Returns ""
+ and sets the .error() flag,  1 if unable to open requested key,
+ -1 if unable to retrieve requested subkey (key instance out of range)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>instance</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandGetCurrentCol</name>
+            <comment>Returns the column # where the caret is in an Edit
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:Returns the line # where the caret is in an Edit</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetHandle</name>
+            <comment>Retrieves the internal handle of a window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:A string containing the window handle value. Otherwise returns ""
+ and sets .error() to 1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandIsVisible</name>
+            <comment>Checks whether a control is visible.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if is visible.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlListViewSelect</name>
+            <comment>Selects one or more items.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+from: The start index.
+to: The to index.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>to</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mouseMove</name>
+            <comment>Moves the mouse pointer.
+x: The screen x coordinate to move the mouse to.
+y: The screen y coordinate to move the mouse to.
+speed: The speed to move the mouse in the range 1 (fastest) to
+              100 (slowest). A speed of 0 will move the mouse instantly.
+              Default speed is 10.
+Return type: @return:true if success, false otherwise (is this correct)?</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>speed</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandSelectString</name>
+            <comment>Sets selection according to string in a ListBox or ComboBox
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+string: The string.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandSetCurrentSelection</name>
+            <comment>Sets selection to occurrence ref in a ListBox or ComboBox.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+occurrance: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>occurrance</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toolTip</name>
+            <comment>Creates a tooltip anywhere on the screen.
+text: The text of the tooltip. (An empty string clears a displaying tooltip)
+x: The x,y position of the tooltip.
+y: The x,y position of the tooltip.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandIsEnabled</name>
+            <comment>Checks whether a control is enabled.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+Return type: @return:True if is enabled.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewUncheck</name>
+            <comment>Uncheck an item.
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to select</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandTabLeft</name>
+            <comment>Moves to the next tab to the right of a SysTabControl32
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlTreeViewExists</name>
+            <comment>Checks if an item exists
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.
+item: The item to check
+Return type: @return:True if the tree view exists.</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>controlCommandUncheck</name>
+            <comment>Un-checks radio or check Button
+title: The title of the window to access.
+text: The text of the window to access.
+control: The control to interact with.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>control</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>runAsSet</name>
+            <comment>Initialize a set of user credentials to use during Run and RunWait
+ operations. 2000/XP or later ONLY.
+username: The user name to use.
+domain: The domain name to use.
+password: The password to use.
+options: 0 = do not load the user profile, 1 = (default) load the
+                user profile, 2 = use for net credentials only
+Return type: @return:Returns 0 if the operating system does not support this function.
+ Otherwise returns 1--regardless of success. (If the login information was
+ invalid, subsequent Run/RunWait commands will fail....)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>username</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>domain</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>options</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>regRead</name>
+            <comment>Reads the name of a value according to it's instance.
+keyname: The registry key to read.
+valueName: The registry value to read.
+Return type: @return:Success:Returns the requested registry value value.
+ Otherwise Returns numeric 1 and sets the oAutoIt.error flag:
+ &lt;br/&gt;1 if unable to open requested key
+ &lt;br/&gt;-1 if unable to open requested value
+ &lt;br/&gt;-2 if value type not supported</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>keyname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>valueName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winWaitActive</name>
+            <comment>Pauses execution of the script until the requested window is active.
+title: The title of the window to check.
+text: The text of the window to check.
+timeout: The timeout in seconds.
+Return type: @return:True if success, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winGetPosHeight</name>
+            <comment>Retrieves the position and size of a given window.
+title: The title of the window to read.
+text: The text of the window to read.
+Return type: @return:Returns the height of the window. Otherwise returns 1 and sets
+ error() = 1</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winExists</name>
+            <comment>Checks to see if a specified window exists.
+title: The title of the window to activate.
+text: The text of the window to activate.
+Return type: @return:True if window exists, false otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>winList</name>
+            <comment>Retrieves a list of windows.
+title: The title of the window.
+text: The text of the window.
+Return type: @return:Returns a 2 dimensional array containing the window titles
+ and corresponding handles.</comment>
+            <returntype>java.lang.String[][]</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The AutoItX version.</comment>
+        </property>
+        <property>
+            <name>License</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Error</name>
+            <returntype>int</returntype>
+            <comment>Value of the error flag.</comment>
+        </property>
+        <field>
+            <name>SW_SHOWNORMAL</name>
+            <comment>Activates and displays a window. If the window is minimized or maximized,
+ the system restores it to its original size and position.
+ An application should specify this flag when displaying the window
+ for the first time.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPT_MOUSE_CLICK_DOWN_DELAY</name>
+            <comment>Alters the length of the brief pause in between mouse clicks.
+ Time in milliseconds to pause (default=10).</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SW_MAXIMIZE</name>
+            <comment>Maximizes the specified window.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SW_RESTORE</name>
+            <comment>Activates and displays the window. If the window is minimized or maximized,
+ the system restores it to its original size and position.
+ An application should specify this flag when restoring a minimized window.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SW_SHOW</name>
+            <comment>Activates the window and displays it in its current size and position.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWDEFAULT</name>
+            <comment>Sets the show state based on the SW_ value specified by the program
+ that started the application.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SW_HIDE</name>
+            <comment>Minimizes the specified window and activates the next top-level window
+ in the Z order.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPT_SEND_ATTACH_MODE</name>
+            <comment>Sets the way coords are used in the pixel functions, either absolute
+ coords or coords relative to the current active window:
+ &lt;br/&gt;0 = relative coords to the active window
+ &lt;br/&gt;1 = absolute screen coordinates (default)
+ &lt;br/&gt;2 = relative coords to the client area of the active window</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_WIN_SEARCH_CHILDREN</name>
+            <comment>Allows the window search routines to search child windows as well as top-level windows.
+ &lt;br/&gt;0 = Only search top-level windows (default)
+ &lt;br/&gt;1 = Search top-level and child windows</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWNA</name>
+            <comment>Displays the window in its current size and position. This value is
+ similar to SW_SHOW, except the window is not activated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPT_MOUSE_CLICK_DELAY</name>
+            <comment>Alters the length of the brief pause in between mouse clicks.
+ Time in milliseconds to pause (default=10).</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_PIXEL_COORD_MODE</name>
+            <comment>Sets the way coords are used in the mouse functions, either absolute
+ coords or coords relative to the current active window:
+ &lt;br/&gt;0 = relative coords to the active window
+ &lt;br/&gt;1 = absolute screen coordinates (default)
+ &lt;br/&gt;2 = relative coords to the client area of the active window</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_WIN_TITLE_MATCH_MODE</name>
+            <comment>Alters the method that is used to match window titles during search operations.
+ &lt;br/&gt;1 = Match the title from the start (default)
+ &lt;br/&gt;2 = Match any substring in the title
+ &lt;br/&gt;3 = Exact title match
+ &lt;br/&gt;4 = Advanced mode, see Window Titles &amp; Text (Advanced)</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_SEND_KEY_DELAY</name>
+            <comment>Specifies if AutoIt should store the state of capslock before a
+ Send function and restore it afterwards.
+ &lt;br/&gt;0 = don't store/restore
+ &lt;br/&gt;1 = store and restore (default)</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_WIN_WAIT_DELAY</name>
+            <comment>Alters how long a script should briefly pause after a successful window-related operation.
+ Time in milliseconds to pause (default=250).</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_WIN_DETECT_HIDDEN_TEXT</name>
+            <comment>Specifies if hidden window text can be "seen" by the window matching functions.
+ &lt;br/&gt;0 = Do not detect hidden text (default)
+ &lt;br/&gt;1 = Detect hidden text</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWNOACTIVATE</name>
+            <comment>Displays a window in its most recent size and position. This value is
+ similar to SW_SHOWNORMAL, except the window is not actived.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>autoItX</name>
+            <comment>The AutoItX Component.</comment>
+            <returntype>com.jacob.activeX.ActiveXComponent</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWMINIMIZED</name>
+            <comment>Activates the window and displays it as a minimized window.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPT_WIN_TEXT_MATCH_MODE</name>
+            <comment>Alters the method that is used to match window text during search operations.
+ &lt;br/&gt;1 = Complete / Slow mode (default)
+ &lt;br/&gt;2 = Quick mode
+ In quick mode AutoIt can usually only "see" dialog text, button text
+ and the captions of some controls. In the default mode much more text
+ can be seen (for instance the contents of the Notepad window).
+ If you are having performance problems when performing many window
+ searches then changing to the "quick" mode may help.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_CARET_COORD_MODE</name>
+            <comment>Sets the way coords are used in the caret functions, either absolute
+ coords or coords relative to the current active window:
+ &lt;br/&gt;0 = relative coords to the active window,
+ &lt;br/&gt;1 = absolute screen coordinates (default),
+ &lt;br/&gt;2 = relative coords to the client area of the active window.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_SEND_CAPSLOCK_MODE</name>
+            <comment>Specifies if AutoIt attaches input threads when using then Send()
+ function. When not attaching (default mode=0) detecting the state of
+ capslock/scrolllock and numlock can be unreliable under NT4. However,
+ when you specify attach mode=1 the Send("{... down/up}") syntax will not
+ work and there may be problems with sending keys to "hung" windows.
+ ControlSend() ALWAYS attaches and is not affected by this mode.
+ &lt;br/&gt;0 = don't attach (default)
+ &lt;br/&gt;1 = attach</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_MOUSE_COORD_MODE</name>
+            <comment>Sets the way coords are used in the mouse functions, either absolute
+ coords or coords relative to the current active window:
+ &lt;br/&gt;0 = relative coords to the active window
+ &lt;br/&gt;1 = absolute screen coordinates (default)
+ &lt;br/&gt;2 = relative coords to the client area of the active window</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OPT_SEND_KEY_DOWN_DELAY</name>
+            <comment>Alters the length of time a key is held down before released during a
+ keystroke. For applications that take a while to register keypresses
+ (and many games) you may need to raise this value from the default.
+ Time in milliseconds to pause (default=1).</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWMINNOACTIVE</name>
+            <comment>Displays the window as a minimized window. This value is similar to
+ SW_SHOWMINIMIZED, except the window is not activated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SW_SHOWMAXIMIZED</name>
+            <comment>Activates the window and displays it as a maximized window.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPT_MOUSE_CLICK_DRAG_DELAY</name>
+            <comment>Alters the length of the brief pause at the start and end of a mouse
+ drag operation. Time in milliseconds to pause (default=250).</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.2</version>
+    <dependsOn>AutoItX4Java</dependsOn>
+    <dependsOn>jacob</dependsOn>
+</root>

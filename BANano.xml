@@ -1,0 +1,2514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.ab.banano.BANanoRegEx</name>
+        <shortname>BANanoRegEx</shortname>
+        <owner>process</owner>
+        <method>
+            <name>IgnoreCase</name>
+            <comment>Checks whether the "i" modifier is set</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>LastIndex</name>
+            <comment>The lastIndex property specifies the index at which to start the next match.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>InitializeString</name>
+            <comment>Creates a new BANanoRegEx object using the given string
+ 
+ see &lt;a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"&gt;Javascript RegEx reference&lt;/a&gt; for the pattern.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>patternS</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializePattern</name>
+            <comment>Creates a new BANanoRegEx object using the given pattern
+ the outer quotes will be removed
+ 
+ see &lt;a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"&gt;Javascript RegEx reference&lt;/a&gt; for the pattern.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Global</name>
+            <comment>Checks whether the "g" modifier is set</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Source</name>
+            <comment>Return the text of the RegExp pattern</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SearchString</name>
+            <comment>The search() method searches a string for a specified value and returns the position of the match
+ 
+ you don't need to use BANano.RegEx to initiate it.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>patternS</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplaceString</name>
+            <comment>The replace() method replaces a specified value with another value in a string
+ the outer quotes will be removed
+ 
+ you don't need to use BANano.RegEx to initiate it.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>patternS</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>byStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MultiLine</name>
+            <comment>Check whether or not the "m" modifier is set</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Exec</name>
+            <comment>Tests for a match in a string. Returns the first match</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Test</name>
+            <comment>Tests for a match in a string. Returns true or false</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SearchPattern</name>
+            <comment>The search() method searches a string for a specified value and returns the position of the match
+ the outer quotes will be removed
+ 
+ you don't need to use BANano.RegEx to initiate it.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplacePattern</name>
+            <comment>The replace() method replaces a specified value with another value in a string
+ 
+ you don't need to use BANano.RegEx to initiate it.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>byStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoObject</name>
+        <shortname>BANanoObject</shortname>
+        <owner>process</owner>
+        <method>
+            <name>RunMethod</name>
+            <comment>Runs a method on the JavaScript object. 
+ 
+ NOTE: the outer Array will be removed in the javascript.	 
+ So if you want to pass an array, you have to add an extra array.
+ 
+ e.g. if you want to pass "[0,0], "Alain", you actually have to pass [[0,0], "Alain"] 
+ 
+ &lt;code&gt;
+ RunMethod("myMethod", Array(Array(0,0), "Alain"))
+ &lt;/code&gt;
+ 
+ If only one, non Array parram is passed, you can ignore this.
+ 
+ e.g. this is valid
+ 
+ RunMethod("myMethod", "Alain")</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetField</name>
+            <comment>Gets a field value</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>field</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>To initialize for a 'New libObjectName' javascript library
+ 
+ e.g. Javascript:
+ &lt;code&gt;
+ let datepicker = new When({
+    input: document.getElementById('...'),
+    singleDate: true
+ });
+ datepicker.showHeader = true;
+ &lt;/code&gt;
+  
+ Translated to B4J:
+ &lt;code&gt;
+ Dim datepicker As BANanoObject
+ datepicker.Initialize2("When", CreateMap("input": BANano.GetElement("#datepicker").ToObject, "singleDate": True))
+ datepicker.RunMethod("showHeader", True)
+ &lt;/code&gt;</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>jsObject</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetField</name>
+            <comment>Sets a field value</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>field</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Can be used e.g. to connect a BANanoObject to a JavaScript object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>jsObject</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Selector</name>
+            <comment>Useful for e.g. jQuery selectors
+ 
+  &lt;code&gt;
+  Dim jQ as BANanoObject
+  jQ.Initialize("$")
+  JQ.Selector("#btn2").RunMethod("Click", Array(BANano.CallBack(Me, "btn2_clicked", Null))))
+  
+  Sub Btn2_Clicked()
+     BANano.Msgbox("btn2 clicked through BANanoObject and jQuery!")
+  End Sub  
+  &lt;/code&gt;</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>selector</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoElement</name>
+        <shortname>BANanoElement</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ToggleClass</name>
+            <comment>Toggles the class of matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>Class</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetText</name>
+            <comment>Set the text content of matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Render</name>
+            <comment>Sets the innerHTML of the target using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>htmlTemplate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes the matched elements.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Target: and ID (use #), class (use ."), tag etc...</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetData</name>
+            <comment>Handle data-* attributes for the matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Last</name>
+            <comment>Retrieve the last of the matched nodes</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+        </method>
+        <method>
+            <name>Trigger</name>
+            <comment>Triggers an event.  
+ 
+ Params: MUST be defined as Array("", 0, ...)
+         Will be returned in the event.detail property</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStyle</name>
+            <comment>Returns the property value</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>property</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>First</name>
+            <comment>Retrieve the first of the matched nodes</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+        </method>
+        <method>
+            <name>SetStyle</name>
+            <comment>Sets the style of the target BANanoElement. 
+ 
+ example: 
+ 
+ &lt;code&gt;
+ dim json as JSONGenerator
+ json.initialize($"{ "width": "200px", "height": "200px", "background": "green", "border-radius": "5px" }"$)
+ BANano.GetElement("#someid").SetStyle(json.ToString)
+ 
+ or using simply the string (must be valid Json!):
+ BANano.GetElment("#someid").SetStyle($"{ "width": "200px", "height": "200px", "background": "green", "border-radius": "5px" }"$)
+ 
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>jsonString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RenderReplace</name>
+            <comment>Replaces the target using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>htmlTemplate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ToObject</name>
+            <comment>Returns a BANanoObject: nodes[0], the native html object</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+        </method>
+        <method>
+            <name>Scroll</name>
+            <comment>Scroll to the first matched element, smoothly if supported.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HandleEvents</name>
+            <comment>module: the module or class where the method is defined
+ method: the method you want to call
+ 
+ This function is the same as on(), but it executes the e.preventDefault()
+ 
+ The method MUST be defined like this:
+ 
+ &lt;code&gt;
+ sub methodName(event As BANanoEvent) 
+    log(event.ID)
+ end sub
+ &lt;/code&gt;</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>events</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>method</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HasClass</name>
+            <comment>Find if any of the matched elements contains the class passed</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Class</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HasAttr</name>
+            <comment>Find if any of the matched elements contains the attribute passed</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Not</name>
+            <comment>Remove known nodes from nodes</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetData</name>
+            <comment>Handle data-* attributes for the matched elements</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Gets the BANanoElement with the given ID (use '#')</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetText</name>
+            <comment>Retrieve the text content of matched elements</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Before</name>
+            <comment>Add some html as a sibling before each of the matched elements
+ 
+ Note: it is better to use the RenderBefore method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Wrap</name>
+            <comment>Wraps the matched element(s) with the passed argument. It accepts an html tag like .wrap('&lt;div&gt;')</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Parent</name>
+            <comment>Retrieve each parent of the matched nodes, optionally filtered by a selector</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetChecked</name>
+            <comment>Set the checked value of matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>checked</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetChecked</name>
+            <comment>Retrieve the checked value of matched elements</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Off</name>
+            <comment>Remove event handler from matched nodes</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>events</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Prepend</name>
+            <comment>Add some html as a child at the beginning of each of the matched elements
+ 
+ Note: it is better to use the RenderPrepend method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Empty</name>
+            <comment>Remove all child nodes of the matched elements.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+        </method>
+        <method>
+            <name>SetAttr</name>
+            <comment>Handle attributes for the matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddClass</name>
+            <comment>Add html class(es) to all of the matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>Class</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHTML</name>
+            <comment>Retrieve the html of the elements</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Children</name>
+            <comment>Get the direct children of all of the nodes with a filter</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Siblings</name>
+            <comment>Get the siblings of all of the nodes with a filter</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Replace</name>
+            <comment>Replace the matched elements with the passed elements
+ 
+ Note: it is better to use the RenderReplace method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RenderAppend</name>
+            <comment>Add some html as a child at the end of each of the matched elements using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>htmlTemplate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Closest</name>
+            <comment>Find the first ancestor that matches the selector for each node</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveClass</name>
+            <comment>Remove html class(es) to all of the matched elements.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>Class</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHTML</name>
+            <comment>Set the html of the elements.
+	
+ Note: it is better to use the Render method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAttr</name>
+            <comment>Handle removing attributes for the matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAttr</name>
+            <comment>Handle attributes for the matched elements</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RenderBefore</name>
+            <comment>Add some html as a sibling before each of the matched elements using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>htmlTemplate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Append</name>
+            <comment>Add some html as a child at the end of each of the matched elements
+ 
+ Note: it is better to use the RenderAppend method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Length</name>
+            <comment>You can check how many elements are matched with .Length</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>Filter</name>
+            <comment>Get the direct children of the nodes with a filter</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>After</name>
+            <comment>Add some html as a sibling after each of the matched elements
+ 
+ Note: it is better to use the RenderAfter method, as it is much more powerful</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Find</name>
+            <comment>Get all of the descendants of the nodes with a filter</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>filter</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RenderAfter</name>
+            <comment>Add some html as a sibling after each of the matched elements using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>htmlTemplate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetValue</name>
+            <comment>Set the value content of matched elements</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>On</name>
+            <comment>module: the module or class where the method is defined
+ method: the method you want to call
+ 
+ The method MUST be defined like this:
+ 
+ &lt;code&gt;
+ sub methodName(event As BANanoEvent) 
+    log(event.ID)
+ end sub
+ &lt;/code&gt;</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>events</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>method</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetValue</name>
+            <comment>Retrieve the value content of matched elements</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>RenderPrepend</name>
+            <comment>Add some html as a child at the beginning of each of the matched elements using the htmlTemplate and the provided jsonData
+ 
+ The htmlTemplate is a &lt;a href="https://github.com/janl/mustache.js"&gt;Mustache&lt;/a&gt; template.</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoMQTTConnectOptions</name>
+        <shortname>BANanoMQTTConnectOptions</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetLastWill</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Topic</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Payload</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>QOS</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Retained</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the username and password.
+ Pass empty strings if username or password are not required.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UserName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>UserName</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the connection user name.</comment>
+        </property>
+        <property>
+            <name>CleanSession</name>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>If set to true (default value) then the state will not be preserved in the case of client restarts.</comment>
+        </property>
+        <property>
+            <name>Password</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the connection password.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoMQTTClient</name>
+        <shortname>BANanoMQTTClient</shortname>
+        <owner>process</owner>
+        <event>Connected (Success As Boolean)</event>
+        <event>Disconnected</event>
+        <event>MessageArrived (Topic As String, Payload() As Byte)</event>
+        <method>
+            <name>Publish2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Topic</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Payload</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>QOS</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Retained</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Connect</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Subscribe</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Topic</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>QOS</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Unsubscribe</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Topic</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Only Websockets are supported</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Server</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>port</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>isSecure</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ClientID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Connect2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Options</name>
+                <type>com.ab.banano.BANanoMQTTConnectOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Publish</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Topic</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Payload</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>QOS_0_MOST_ONCE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>QOS_1_LEAST_ONCE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ClientID</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>QOS_2_EXACTLY_ONCE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoJSONParser</name>
+        <shortname>BANanoJSONParser</shortname>
+        <owner>process</owner>
+        <method>
+            <name>NextArray</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>NextObject</name>
+            <comment>Parses the text assuming that the top level value is an object.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the text that will be parsed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoJSONGenerator</name>
+        <shortname>BANanoJSONGenerator</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ToPrettyString</name>
+            <comment>Creates a JSON string from the initialized object.
+ The string will be indented and easier for reading.
+ Note that the string created is a valid JSON string.
+ Indent - Number of spaces to add to each level.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Indent</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the object with the given List.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>List</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ToString</name>
+            <comment>Creates a JSON string from the initialized object.
+ This string does not include any extra whitespace.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object with the given Map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoSQL</name>
+        <shortname>BANanoSQL</shortname>
+        <owner>process</owner>
+        <event>SQLExecuteResult(Tag as String, Result as List)</event>
+        <event>SQLOpened()</event>
+        <event>SQLExecuteError(Tag as String, Reason as String)</event>
+        <method>
+            <name>ExecuteWait</name>
+            <comment>Returns the result as a List of maps containing the requested data in case of a SELECT 
+ 
+ Note: Methods using ExecuteWait can NOT return a value!</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Query</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Args</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Execute</name>
+            <comment>Will return the result in the SQLResult(Tag as String, Result as List) event.  The tag can be used to see where it is coming from. 
+ 
+ Result returns a list of maps containing the requested data in case of a SELECT
+ 
+ if an error occurs, SQLExecuteError() will be raised with Tag you passed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Query</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Args</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenWait</name>
+            <comment>Opens the database and creates it if it does not exist. Uses IndexedDB so everything works with promises.
+ 
+ Note: Methods using OpenWait can NOT return a value!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>databaseName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ExecuteCallback</name>
+            <comment>Will return the result in the callback. MUST BE defined as:
+ 
+ functionName(success As Boolean, Result as List, Reason as String)
+ 
+ Result returns a list of maps containing the requested data in case of a SELECT</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Query</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Args</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Open</name>
+            <comment>Opens the database and creates it if it does not exist. Uses IndexedDB so everything works with promises.
+ 
+ When the database is created and open the event SQLOpened() will be raised
+ 
+ if an error occurs, SQLExecuteError() will be raised with Tag="CREATEDB"</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>databaseName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoHeader</name>
+        <shortname>BANanoHeader</shortname>
+        <owner>process</owner>
+        <method>
+            <name>AddAppleTouchIcon</name>
+            <comment>home screen icons for Safari and iOS</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddFavicon</name>
+            <comment>Add additional fav icons</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddCSSFile</name>
+            <comment>Load an extra css file.  if an asset file it will be copied to the styles folder</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddJavascriptFile</name>
+            <comment>Load an extra javascript file.  if an asset file it will be copied to the scripts folder</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddManifestIcon</name>
+            <comment>PWA Icon used in the manifest.json file</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMeta</name>
+            <comment>must be a full html meta tag. Use smartstrings! e.g.
+ 
+ "$&lt;meta name="keywords" content="HTML,CSS,XML,JavaScript"&gt;$"</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>metaTag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMSTileIcon</name>
+            <comment>home screen icons for Microsoft</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetMaskIcon</name>
+            <comment>Set the Mask Icon</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AssetFileNameOrURL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <field>
+            <name>Description</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Keywords</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Viewport</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>MSTileColor</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Title</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Charset</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Manifest</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>MaskIconColor</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Language</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Author</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>BaseURL</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ThemeColor</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Expires</name>
+            <comment></comment>
+            <returntype>long</returntype>
+        </field>
+        <field>
+            <name>BaseTarget</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>BackgroundColor</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.ab.banano.BANanoEvent</name>
+        <shortname>BANanoEvent</shortname>
+        <owner>process</owner>
+        <method>
+            <name>AltKey</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ScreenX</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ScreenY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ClientX</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DeltaZ</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DeltaMode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ClientY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DeltaY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DeltaX</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>MetaKey</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ShiftKey</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Char</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>StopPropagation</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>KeyCode</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>ID</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>PageX</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>PageY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>CharCode</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>OffsetX</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>OffsetY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>TimeStamp</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>Type</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>CurrentTarget</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>RelatedTarget</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>PreventDefault</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CtrlKey</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Buttons</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>Key</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Detail</name>
+            <comment></comment>
+            <returntype>java.lang.Object[]</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.ab.banano.BANano</name>
+        <shortname>BANano</shortname>
+        <owner>process</owner>
+        <event>Ready()</event>
+        <event>CallAjaxResult(Success as Boolean, UniqueID as String, Result As String)</event>
+        <event>IsConnectedResult(Tag as String, Result as boolean)</event>
+        <event>EmailSent(Tag as String, Message as String)</event>
+        <event>CallInlinePHPResult(Success as Boolean, UniqueID as String, Result As String)</event>
+        <method>
+            <name>EncodeURI</name>
+            <comment>The encodeURI() function is used to encode a URI.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallBack</name>
+            <comment>Useful where a lirary you are wrapping needs a function() {} as parameter.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UNDEFINED</name>
+            <comment>transpiles as 'undefined'</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>GetElements</name>
+            <comment>Target: and ID (use #), class (use ."), tag etc...</comment>
+            <returntype>com.ab.banano.BANanoElement[]</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsFinite</name>
+            <comment>The isFinite() function determines whether a number is a finite, legal number.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallSub</name>
+            <comment>Calls a method from another module/class</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Do not uses spaces in the appShortName!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>appShortName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>appVersion</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallInlinePHPWait</name>
+            <comment>Makes a php call to an inline php method.  Returns the result of the call. 
+ 
+ Note: Methods using CallInlinePHPWait can NOT return a value!
+ 
+ Example:&lt;code&gt;
+ Dim res as String = BANano.CallInlinePHPWait("SayHello", CreateMap("Name": "BANano"))
+ log(res)
+ 
+ #if PHP
+ function SayHello($Name) {
+    $ret = Array("answer" =&gt; "Hello " .$Name. "!");
+    echo json_encode($ret);	
+ }
+ #End If 
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>methodParams</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CheckInternetConnection</name>
+            <comment>Checks if the app can reach the internet
+ 
+ Will raise the banano IsConnected(Tag as String, Result as boolean) event
+ 
+ you can then use the tag to see who was the caller and act accordingly</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Build</name>
+            <comment>Should be called in AppStart() in the Main module.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>outputDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallAjaxWait</name>
+            <comment>Makes an ajax call.  Returns the result of the call 
+ 
+ Note: Methods using CallAjaxWait can NOT return a value!</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dataType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>withCredentials</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>headers</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EncodeURIComponent</name>
+            <comment>The encodeURIComponent() function encodes a URI component.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Eval</name>
+            <comment>The eval() function evaluates or executes an argument.
+
+  If the argument is an expression, eval() evaluates the expression. If the argument is one or more JavaScript statements, eval() executes the statements.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAllViewsFromLayoutArray</name>
+            <comment>Returns a map with all the custom views that are in the layout, with unique index  
+ 
+ The unique index was returned by the LoadLayoutArray() method.
+ 
+ All keys in the map are lowercased!</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>layoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>unqiueIndex</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallInlinePHP</name>
+            <comment>Makes a php call to an inline php method.  Returns the result of the call to BANano_CallInlinePHPResult() 
+ 
+ Example:&lt;code&gt;
+ BANano.CallInlinePHP("SayHello", CreateMap("Name": "BANano"), "ID0001")
+ 
+ #if PHP
+ function SayHello($Name) {
+    $ret = Array("answer" =&gt; "Hello " .$Name. "!");
+    echo json_encode($ret);	
+ }
+ #End If
+ 
+ Sub BANano_CallInlinePHPResult(Success As Boolean, UniqueID As String, Result As String)
+     Log(Success)
+     Log(UniqueID)
+     Log(Result)
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>methodParams</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+            <parameter>
+                <name>uniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Msgbox</name>
+            <comment>Shows an alert box, same as BANano.Alert</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ToObject</name>
+            <comment>Converts the BANanoElement to a BANanoObject</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+            <parameter>
+                <name>elem</name>
+                <type>com.ab.banano.BANanoElement</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CheckInternetConnectionWait</name>
+            <comment>Checks if the app can reach the internet
+ 
+ Note: Methods using CheckInternetConnectionWait can NOT return a value!</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ToBase64</name>
+            <comment>Converts a string to a base 64 string.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadLayout</name>
+            <comment>Loads a .bjl layout (using ONLY BANano Custom views).
+ 
+ You add/set BANano Custom Views in the Abstract Designer (Add View -&gt; Custom view). Only these properties apply:
+	  Name = HTML ID
+	  EventName:  
+	  + All CustomView Properties
+
+ Note: As B4J custom components currently can't set the Parent property except to main, an own algortihm tries to determine it.
+ 
+       layoutName must be a string.  It can not be a variable.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>layoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EmptyLocalStorage</name>
+            <comment>Empty the LocalStorage for this domain</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsTablet</name>
+            <comment>Returns if the browser is running on a tablet</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetType</name>
+            <comment>Will be depreciated in the future.  Use the normal B4J GetType() instead!
+ 
+ to get the type of the object (same as BANano.TypeOf)</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>var</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PHPAddHeader</name>
+            <comment>Add a header in the generated php file
+ 
+ e.g.
+ &lt;code&gt;
+ BANano.PHPAddHeader("Access-Control-Allow-Origin: *")
+  &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>header</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WaitFor</name>
+            <comment>Waits for the methodName to be resolved
+ The method MUST have this signature (name must end with 'Wait' and param name must be Resolve as Object!): methodNameWAIT(Resolve as Object)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>result</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCookie</name>
+            <comment>jsonOptions: expires, path, domain, secure
+ 
+  example: expires 7 days from now 
+  
+  SetCookie("mycookie", "myvalue", "{expires: 7, path: '', domain: 'mydomain.com', secure: 'true'}")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonOptions</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsPhone</name>
+            <comment>Returns if the browser is running on a phone</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>CallAjax</name>
+            <comment>Makes an ajax call.  Returns the result of the call to BANano_CallAjaxResult() 
+ 
+ Example:&lt;code&gt;
+ dim headers as Map
+ headers.initialize
+ headers.put("Content-Type", "application/json")
+ BANano.CallAjax("https://reqres.in/api/users?page=2","GET","jsonp", "","ID0001", false, headers)
+ 
+ Sub BANano_CallAjaxResult(Success As Boolean, UniqueID As String, Result As String)
+     Log(Success)
+     Log(UniqueID)
+     Log(Result)
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dataType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>uniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>withCredentials</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>headers</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BuildAsLibrary</name>
+            <comment>Should be called in AppStart() in the Main module. 
+ 
+ Will Build the transpiled files to your Additional Libraries folder.
+ 
+ Do not forget to compile your Library with the B4J IDE: Project - Compile To Library
+ to generate the .jar and .xml files.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetLocalStorage</name>
+            <comment>Returns the saved json from the key</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Split</name>
+            <comment>Same a B4Js Regex.Split()</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallDebugger</name>
+            <comment>Stops the execution of JavaScript.  Is ignored if in release mode.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>parseFloat</name>
+            <comment>The parseFloat() function parses a string and returns a floating point number.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RunJavascriptMethod</name>
+            <comment>Method to call a Javascript method.  The methodName is Case Sensitive!
+ 
+ For inline javascript, use #If JAVASCRIPT/#End If
+ 
+ Note: it does not mather where you put inline javascript, all of it is global.
+ 
+ Example:&lt;code&gt;	 * 
+ Log(BANano.RunInlineJavascriptMethod("evaluate", Array As String("10 * 20")))
+ 
+ #if JAVASCRIPT
+ function evaluate(s) {
+    // so we get back a string
+	  return '' + eval(s);
+ }
+ #End If
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecodeURIComponent</name>
+            <comment>The decodeURIComponent() function decodes a URI component.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendEmail</name>
+            <comment>Sends a simple email 
+ 
+ Use https://www.smtpjs.com/ to encrypt your credentials and generate the token. It will look
+ somthing like this:
+ 
+ It will raise the _EmailSent() event, returning the tag and a message. Can be OK or an error message.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>token</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>to</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>body</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>INFINITY</name>
+            <comment>transpiles as 'Infinity'</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>ToElement</name>
+            <comment>Converts the BANanoObject to a BANAnoElement</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>com.ab.banano.BANanoObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SF</name>
+            <comment>Returns the html conversion of a string using Smart Formatting tags.
+ 
+ Smart formatting Tags:
+ 
+ {B}{/B}: Bold
+ {I}{/I}: Italic
+ {U}{/U}: Underline
+ {SUB}{/SUB}: Subscript
+ {SUP}{/SUP}: Superscript
+ {BR}: Line break
+ {WBR}: Word break opportunity
+ {NBSP}: Non breakable space
+ {AL}http://...{AT}text{/AL}: Link, opening a new tab
+ {AS}http://...{AT}text{/AS}: Link, not opening a new tab
+ {C:#RRGGBB}{/C}: Color
+ {ST:styles}{/ST}: Add specific styles e.g. {ST:font-size:0.9rem;color:#2B485C}My text in font-size 0.9rem{/ST}
+ {IC:#RRGGBB}{/IC}: Icons (if the correct .css or font is loaded) e.g. {IC:#FFFFFF}fa fa-refresh{/IC}</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>smartFormattedText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLocalStorage</name>
+            <comment>To set data into localStorage, you must use the LocalStorageSet API. There are two arguments:
+ key for the Object's key, and json for the key value
+ 
+ example: 
+ 
+ &lt;code&gt;
+ dim json as JSONGenerator
+ json.initialize("{ founded: '1992', formed: 'California', members: ['Tom Delonge', 'Mark Hoppus', 'Travis Barker']}")
+ SetLocalStorage("someband", json)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>json</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RunThenCatchJavascriptMethod</name>
+            <comment>Method to call a Javascript method with then/catch callbacks.  The methodName is Case Sensitive!
+ 
+ Use BANano.CallBack to build the callbacks or pass null if not used</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>thenCallBack</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>catchCallBack</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RunInlineJavascriptMethod</name>
+            <comment>Will be depreciated. Use RunJavascript() method instead.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSuffixFromID</name>
+            <comment>Extracts the last number from an id
+ 
+  e.g. if the id = mybutton_1 then 1 is returned</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveLocalStorage</name>
+            <comment>Deletes the key from the LocalStorage</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecodeURI</name>
+            <comment>The decodeURI() function is used to decode a URI.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SubExists</name>
+            <comment>Will be depreciated in the future.  Use the normal B4J SubExists instead!
+ 
+ Checks if a method exists in a module.  
+ 
+ Note: for CallBacks, Events or CallSub, this is already done automatically</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FromBase64</name>
+            <comment>Converts a base 64 string back to a normal string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MethodVarsToMap</name>
+            <comment>Creates a Map of all the parameters past in the current method.  
+ If includeSubName = true, then the subs name is added with key "subname"</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>includeSubName</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Window</name>
+            <comment>Returns the Window Object as a BANanoObject.  From there on, you can access all the rest (like document, innerWidth, navigator)
+ using the BANanoObject methods 
+ 
+ example:
+ &lt;code&gt;
+ Log(BANano.Window.GetField("navigator").GetField("appName"))
+ &lt;/code&gt;</comment>
+            <returntype>com.ab.banano.BANanoObject</returntype>
+        </method>
+        <method>
+            <name>DebugTrackMethod</name>
+            <comment>Will track this method in the Browsers log</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>moduleName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>methodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetElement</name>
+            <comment>Target: and ID (use #), class (use ."), tag etc...</comment>
+            <returntype>com.ab.banano.BANanoElement</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TypeOf</name>
+            <comment>Will be depreciated in the future.  Use the normal B4J GetType() instead!
+ 
+ to get the type of the object (same as BANano.GetType)</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>var</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadLayoutArray</name>
+            <comment>Loads a .bjl layout (using ONLY BANano Custom views) as an array. You can NOT Dim one of the views in such a layout in Globals!
+ 
+ You add/set BANano Custom Views in the Abstract Designer (Add View -&gt; Custom view). Only these properties apply:
+	  Name = HTML ID
+	  EventName:  
+	  + All CustomView Properties
+
+ Note: As B4J custom components currently can't set the Parent property except to main, an own algortihm tries to determine it.
+ 
+       layoutName must be a string.  It can not be a variable.
+       
+ Return: will return a unique number that has been added as suffix to every view in the layout.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>layoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>emptyTargetFirst</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsNaN</name>
+            <comment>The isNaN() function determines whether a value is an illegal number (Not-a-Number).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resolve</name>
+            <comment>This method can only be used in a ...Wait() method with the signature funcName(Resolve as Object)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>returnPromise</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parseInt</name>
+            <comment>The parseInt() function parses a string and returns an integer.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DebugTrackLine</name>
+            <comment>When running in debug mode, you can get some extra debug information by tracking some line.
+ In the generated javascript file, some comment lines showing the the B4J code have a virtual number prefix: [number]
+ 
+ You can use this number to track the transpiling of that line.
+ 
+ Tracks in the B4J log</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>moduleName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>virtualLineNumber</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCookie</name>
+            <comment>Returns a the value of the cookie</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sleep</name>
+            <comment>Will be depreciated in the future.  Use the normal B4J Sleep() instead!
+ 
+ Can only be used in a ...Wait() method.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>milliseconds</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Do not uses spaces in the appShortName!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>appShortName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>appVersion</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>B4JAdditionalLibrariesPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Exists</name>
+            <comment>Checks if a element(s) exists 
+ 
+ Target: and ID (use #), class (use ."), tag etc...</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetMeToNull</name>
+            <comment>This would be the same as typing Me = Null in B4J, but this is not possible in the IDE</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Alert</name>
+            <comment>Shows an alert box, same as BANano.Msgbox</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NAN</name>
+            <comment>transpiles as 'NaN' (Not-a-Number)</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>ToString</name>
+            <comment>The ToString() function converts the value of an object to a string.
+ 
+ Note: The ToString() function returns the same value as toString() of the individual objects.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveCookie</name>
+            <comment>Deletes a cookie.
+ 
+ IMPORTANT! When deleting a cookie and you're not relying on the default attributes, 
+ you must pass the exact same path and domain attributes that were used to set the cookie
+  
+ example: 
+ 
+ RemoveCookie("mycookie", "{path: '', domain: 'mydomain.com'}")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>jsonOptions</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Initialbody</name>
+            <parameter>
+                <name>body</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Can ONLY be used in AppStart().  It writes the string directly as the innerHML of the body tag.</comment>
+        </property>
+        <property>
+            <name>ExternalTestConnectionServer</name>
+            <parameter>
+                <name>server</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>By default the connection to the internet is tested by checking if donotdelete.gif can be retrieved 
+ from the assets folder where the app is hosted.
+ 
+ However, if you do not put it on a host (e.g. just by opening the .html file from disk), 
+ You can upload the donotdelete.gif to some host on the internet to test for an internet connection.</comment>
+        </property>
+        <property>
+            <name>UseServiceWorker</name>
+            <parameter>
+                <name>bool</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Can ONLY be used in AppStart().  Set this param to false if you do not want to use a ServiceWorker
+ Default true</comment>
+        </property>
+        <field>
+            <name>PHP_NAME</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Version215</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Header</name>
+            <comment></comment>
+            <returntype>com.ab.banano.BANanoHeader</returntype>
+        </field>
+        <field>
+            <name>Version</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SERVICEWORKER_NAME</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>JAVASCRIPT_NAME</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PHPHost</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>VersionName</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>MANIFEST_NAME</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HTML_NAME</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>2.15</version>
+    <comment>BANano is a library created by Alain Bailleul that transpiles B4J source code to Javascript/HTML/css.
+ It can be used to make Websites and WebApps, even Progressive Web Apps (PWA).  
+ It does not depend on jQuery but generates pure Vanilla Javascript.
+ 
+ It does not rely on any javascript/css framework, so you can use whatever one you prefer.  You do have
+ to write the wrapper for the framework you want to use yourself.  In time I hope other users will
+ provide their .bas file to quickly integrate it for others.
+ 
+ The generated HTML, CSS and JavaScript files not not need to run from a VPN! In fact, you can just
+ run the app by opening the html file in any browser.  Because they are PWA's, they also work after
+ the user goes off-line.
+ 
+ For communication with the outside world, Ajax calls and MQTT are build-in.
+ 
+ For local storage you can use Cookies, LocalStorage and IndexedDB (using the build-in BANAnoSQL object).
+ 
+ The BANanoJSONParser and BANanoJSONGenerator can be used to read and write Json. They are the equivalent
+ of the normal JSONParser and JSONGenerator from B4X.
+ 
+ Send mails from your webapp using BANano.SendEmail. Use https://www.smtpjs.com/ to encrypt your credentials
+ and generate the token.</comment>
+    <author>Alain Bailleul</author>
+    <dependsOn>ByteConverter</dependsOn>
+    <dependsOn>jRandomAccessFile</dependsOn>
+    <customClass>name:BANano Custom View, filenamewithoutextension:banano_customview</customClass>
+</root>

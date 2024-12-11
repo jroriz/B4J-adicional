@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <NOTE>This XML file should only be used for documentation purposes.</NOTE>
+    <doclet-version-NOT-library-version>0</doclet-version-NOT-library-version>
+    <class>
+        <name>xResizeAndCrop</name>
+        <shortname>xResizeAndCrop</shortname>
+        <method>
+            <name>Initialize</name>
+            <comment/>
+            <returntype/>
+            <parameter>
+                <name>Callback</name>
+                <type>Object</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment/>
+            <returntype/>
+            <parameter>
+                <name>Base</name>
+                <type>Object</type>
+            </parameter>
+            <parameter>
+                <name>Lbl</name>
+                <type>Label</type>
+            </parameter>
+            <parameter>
+                <name>Props</name>
+                <type>Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadImage</name>
+            <comment>loads the given image file to the xResizeAndCrop Customview</comment>
+            <returntype/>
+            <parameter>
+                <name>Dir</name>
+                <type>String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateImage</name>
+            <comment>rotates the original image
+only multiples of 90 are allowed</comment>
+            <returntype/>
+            <parameter>
+                <name>Degrees</name>
+                <type>Int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>CroppedView</name>
+            <comment>sets the Panel / Pane view for the cropped image, write only
+the Panel / Pane view must be added in the main code and transmitted to the custom view as this property.</comment>
+            <returntype/>
+            <parameter>
+                <name>CroppedView</name>
+                <type>B4XView</type>
+            </parameter>
+        </property>
+        <property>
+            <name>Image</name>
+            <comment/>
+            <returntype/>
+        </property>
+        <property>
+            <name>CroppedImage</name>
+            <comment>gets the cropped image as a B4XBitmap, read only</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>Left</name>
+            <comment>sets or gets the Left property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>Top</name>
+            <comment>sets or gets the Top property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>Width</name>
+            <comment>sets or gets the Width property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>Height</name>
+            <comment>sets or gets the Height property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>Visible</name>
+            <comment>sets or gets the Visible property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>MinCroppedWidth</name>
+            <comment>sets or gets the MinWidth property
+value in pixels, no dip value
+if WHRatio &lt;&gt; "None", the min cropped height is set acording to the width / height ratio</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>MinCroppedHeight</name>
+            <comment>sets or gets the MinHeight property
+value in pixels, no dip value
+valid only if WidthHeightRatio is different from "None"
+if WidthHeightRatio = "None" the min cropped height is set acording to the width / height ratio</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>HandleColor</name>
+            <comment>sets or gets the HandleColor property
+value must a xui color
+Example code: &lt;code&gt;xResizeAndCrop1.HandleColor = xui.Color_RGB(255, 215, 0)&lt;/code&gt;</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>WidthHeightRatio</name>
+            <comment>sets or gets the WidthHeightRatio property
+possible values: None  Square  1.5  4/3  16/9  Custom
+None = any width and height
+Square = True means that the resized image is always square
+3/2 = ratio 1.5
+2/3 = ratio 0.66667
+4/3 = ratio 4/3
+3/4 = ration 3/4
+16/9 = ratio 16/9
+9/16 = ratio 9/16
+Custom = user defined ratio set in the WidthHeightRatioValue property</comment>
+            <returntype/>
+        </property>
+        <property>
+            <name>WidthHeightRatioValue</name>
+            <comment>sets or gets the WidthHeightRatioValue property
+only active if the WidthHeightRatio property is set to "None"</comment>
+            <returntype/>
+        </property>
+    </class>
+    <version>1.2</version>
+    <author>Klaus CHRISTL (klaus)</author>
+</root>

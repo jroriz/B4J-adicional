@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.tillekesoft.tensorflow.LabelImage</name>
+        <comment>Sample use of the TensorFlow Java API to label images using a pre-trained model.
+ Modification and additions by Mikael Osterhed for better use with B4A-wrapper</comment>
+        <owner>process</owner>
+        <method>
+            <name>imageToJPEGByteArray</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>aImage</name>
+                <type>javafx.scene.image.Image</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>qualityPercent</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RecognizeImages</name>
+            <comment></comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>ImagePathAndFileName</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RecognizeBitmap</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>javafx.scene.image.Image</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>toAdd</name>
+                <type>com.tillekesoft.tensorflow.ReadyListener</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.tillekesoft.tensorflow.TensorFlowWrapper</name>
+        <shortname>TensorFlow</shortname>
+        <owner>process</owner>
+        <event>OnTensorFlowLoaded</event>
+        <method>
+            <name>RecognizeImageBitmap</name>
+            <comment>Method for recognizing an image-object in memory. Similar to Bitmap in B4A.
+ Returns a String with a possible result.
+ Example: Dim bmp as Image
+          bmp = some image in memory
+          Dim result as String = ten.RecognizeImageBitmap(bmp)
+          Log(result)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>image</name>
+                <type>javafx.scene.image.Image</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RecognizeImages</name>
+            <comment>Method for recognizing images. Returns a List with possible results
+ Usage: Pass a List with path and filename(s) of the images to recognize
+ Example: Dim PicList As List
+ 	        PicList.Initialize
+ 	        PicList.add("C://MachineLearning//testimages//porcupine.jpg")
+ 	        Dim result As String = ten.RecognizeImages(PicList) 'better to iterate list
+ 	        Log(result</comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>ImagePathAndFileNames</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes tensorflow. Pass EventName for using events in B4A. Other parameters are:
+ ModelInputName = entrypoint in graph, ModelOutputName=exitpoint in graph,
+ ModelDir=directory where model and label are stored, ModelName=name of model-file,
+ LabelsName=name of label-file, ModelScaledPixelSize=Size used in model
+ Note: Above parameters depend on the model in use. Check model specification and/or (re)training script.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ModelInputName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ModelOutputName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ModelDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ModelName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LabelsName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ModelScaledPixelSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.3</version>
+    <author>moster67/Mikael Osterhed</author>
+    <dependsOn>animal-sniffer-annotations-1.14</dependsOn>
+    <dependsOn>checker-qual-2.5.2</dependsOn>
+    <dependsOn>error_prone_annotations-2.1.3</dependsOn>
+    <dependsOn>guava-26.0-jre</dependsOn>
+    <dependsOn>j2objc-annotations-1.1</dependsOn>
+    <dependsOn>jsr305-3.0.2</dependsOn>
+    <dependsOn>libtensorflow_jni-1.10.0</dependsOn>
+    <dependsOn>libtensorflow-1.10.0</dependsOn>
+    <dependsOn>tensorflow-1.10.0</dependsOn>
+</root>

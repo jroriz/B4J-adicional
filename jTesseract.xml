@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <b4x_version>7.00</b4x_version>
+  <dependsOn>jcore</dependsOn>
+  <dependsOn>jfx</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>json</dependsOn>
+  <dependsOn>C:\Tess4J\lib\commons-beanutils-1.9.2</dependsOn>
+  <dependsOn>C:\Tess4J\lib\commons-collections-3.2.1</dependsOn>
+  <dependsOn>C:\Tess4J\lib\commons-io-2.6</dependsOn>
+  <dependsOn>C:\Tess4J\lib\commons-logging-1.2</dependsOn>
+  <dependsOn>C:\Tess4J\lib\fontbox-2.0.12</dependsOn>
+  <dependsOn>C:\Tess4J\lib\ghost4j-1.0.1</dependsOn>
+  <dependsOn>C:\Tess4J\lib\itext-2.1.7</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jai-imageio-core-1.4.0</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jbig2-imageio-3.0.2</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jboss-logging-3.1.4.ga</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jboss-vfs-3.2.14.final</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jcl-over-slf4j-1.7.25</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jna-5.1.0</dependsOn>
+  <dependsOn>C:\Tess4J\lib\jul-to-slf4j-1.7.25</dependsOn>
+  <dependsOn>C:\Tess4J\lib\lept4j-1.10.0</dependsOn>
+  <dependsOn>C:\Tess4J\lib\log4j-1.2.17</dependsOn>
+  <dependsOn>C:\Tess4J\lib\log4j-over-slf4j-1.7.25</dependsOn>
+  <dependsOn>C:\Tess4J\lib\logback-classic-1.2.3</dependsOn>
+  <dependsOn>C:\Tess4J\lib\logback-core-1.2.3</dependsOn>
+  <dependsOn>C:\Tess4J\lib\pdfbox-2.0.12</dependsOn>
+  <dependsOn>C:\Tess4J\lib\pdfbox-debugger-2.0.12</dependsOn>
+  <dependsOn>C:\Tess4J\lib\pdfbox-tools-2.0.12</dependsOn>
+  <dependsOn>C:\Tess4J\lib\slf4j-api-1.7.25</dependsOn>
+  <dependsOn>C:\Tess4J\lib\tess4j-4.3.1</dependsOn>
+  <dependsOn>C:\Tess4J\lib\xmlgraphics-commons-1.4</dependsOn>
+  <class>
+    <name>b4j.example.jtesseract</name>
+    <shortname>jTesseract</shortname>
+    <method>
+      <name DesignerName="isInitialized">_isinitialized</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You must supply where the traineddata files are located.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>traineddataFileLocation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OcrFromBuffer">_ocrfrombuffer</name>
+      <comment> do OCR on a the byte buffer
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Buffer</name>
+        <type>byte[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OcrFromFile">_ocrfromfile</name>
+      <comment> do OCR on an image file pass full path to sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

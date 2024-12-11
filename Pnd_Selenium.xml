@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.pendrush.selenium.kotlin.DataWebElement</name>
+        <shortname>Pnd_DataWebElement</shortname>
+        <owner>process</owner>
+        <property>
+            <name>AriaRole</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets result of computing the WAI-ARIA role of element.
+ See &lt;a href="https://www.w3.org/TR/webdriver/#get-computed-role"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The WAI-ARIA role of the element.</comment>
+        </property>
+        <property>
+            <name>Rect</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns: The location and size of the rendered element. (X, Y, Height, Width)
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-rect"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ X = X axis position of the top-left corner of the web element relative to the current browsing context’s document element in CSS pixels.
+ Y = Y axis position of the top-left corner of the web element relative to the current browsing context’s document element in CSS pixels.
+ Height = Height of the web element’s bounding rectangle in CSS pixels.
+ Width = Width of the web element’s bounding rectangle in CSS pixels.</comment>
+        </property>
+        <property>
+            <name>AccessibleName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Getsa result of a Accessible Name and Description Computation for the Accessible Name of the element.
+ See &lt;a href="https://www.w3.org/TR/webdriver/#get-computed-label"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The accessible name of the element.</comment>
+        </property>
+        <property>
+            <name>TagName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the tag name of this element. Not the value of the name attribute: will return "input" for the element &lt;input name="foo" /&gt;.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-tag-name"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The tag name of this element.</comment>
+        </property>
+        <property>
+            <name>Displayed</name>
+            <returntype>java.lang.Boolean</returntype>
+            <comment>Is this element displayed or not? This method avoids the problem of having to parse an element's "style" attribute.
+ Returns: Whether the element is displayed.</comment>
+        </property>
+        <property>
+            <name>Attribute</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>java.lang.Boolean</returntype>
+            <comment>Is the element currently enabled or not? This will generally return true for everything but disabled input elements.
+ See &lt;a href="https://w3c.github.io/webdriver/#is-element-enabled"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: True if the element is enabled, false otherwise.</comment>
+        </property>
+        <property>
+            <name>Text</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the visible (i.e. not hidden by CSS) text of this element, including sub-elements.
+ See W3C WebDriver specification  for more details.
+ Returns: The visible text of this element.</comment>
+        </property>
+        <property>
+            <name>Selected</name>
+            <returntype>java.lang.Boolean</returntype>
+            <comment>Determine whether this element is selected or not.
+ This operation only applies to input elements such as checkboxes, options in a select and radio buttons.
+ For more information on which elements this method supports, refer to the &lt;a href="https://w3c.github.io/webdriver/#is-element-selected"&gt;specification&lt;/a&gt;.
+ See &lt;a href="https://w3c.github.io/webdriver/#is-element-selected"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: True if the element is currently selected or checked, false otherwise.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.pendrush.selenium.Wrapper</name>
+        <shortname>Pnd_Selenium</shortname>
+        <owner>process</owner>
+        <event>GetFinished</event>
+        <method>
+            <name>FindByPartialLinkTextWebElement</name>
+            <comment>FindByPartialLinkText works on the link text as you see it with your eyes on the website (after all CSS is applied), not by the website source code.
+ PartialLinkText – The partial text to match against.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>PartialLinkText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WebElementSubmit</name>
+            <comment>If this current element is a form, or an element within a form, then this will be submitted to the remote server.
+ If this causes the current page to change, then this method will block until the new page is loaded.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>WebElement</name>
+                <type>org.openqa.selenium.WebElement</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByClassNameList</name>
+            <comment>Find all elements within the current page using Class Name.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ This method is affected by the 'implicit wait' times in force at the time of execution.
+ When implicitly waiting, this method will return as soon as there are more than 0 items in the found collection, or will return an empty list if the timeout is reached.
+ See &lt;a href="https://w3c.github.io/webdriver/#find-elements"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AllTabs</name>
+            <comment>Returns: string List of all tabs</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>AddArgument</name>
+            <comment>Argument – The arguments to use when starting Chrome
+ List of possible &lt;a href="https://peter.sh/experiments/chromium-command-line-switches/"&gt;Arguments&lt;/a&gt;.
+ &lt;code&gt;Selenium.AddArgument("--start-maximized")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Argument</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByCssSelectorList</name>
+            <comment>Find elements via the driver's underlying W3C Selector engine.
+ If the browser does not implement the Selector API, a best effort is made to emulate the API.
+ In this case, we strive for at least CSS2 support, but offer no guarantees.
+ CssSelector – CSS expression.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>CssSelector</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WebElementClear</name>
+            <comment>If this element is a form entry element, this will reset its value.
+ See &lt;a href="https://w3c.github.io/webdriver/#element-clear"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>WebElement</name>
+                <type>org.openqa.selenium.WebElement</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Quit</name>
+            <comment>Quits, closing every associated window.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>ChromeDriverPath - Path to Chrome driver
+ &lt;code&gt;
+ Selenium.Initialize("Selenium", "c:\ChromeDriver\chromedriver.exe")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ChromeDriverPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WebElementClick</name>
+            <comment>Click this element. If this causes a new page to load, you should discard all references to this element
+ and any further operations performed on this element will throw a StaleElementReferenceException.
+ Note that if click() is done by sending a native event (which is the default on most browsers/platforms)
+ then the method will _not_ wait for the next page to load and the caller should verify that themselves.
+ There are some preconditions for an element to be clicked.
+ The element must be visible, and it must have a height and width greater than 0.
+ See &lt;a href="https://w3c.github.io/webdriver/#element-click"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>WebElement</name>
+                <type>org.openqa.selenium.WebElement</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByXPathList</name>
+            <comment>Path – The XPath to use.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SwitchToTab</name>
+            <comment>Switch the focus of future commands for this driver to the window/tab with the given name.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WebElementSendKeys</name>
+            <comment>Use this method to simulate typing into an element, which may set its value.
+ See &lt;a href="https://w3c.github.io/webdriver/#element-send-keys"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Params: Keys – character sequence to send to the element</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>WebElement</name>
+                <type>org.openqa.selenium.WebElement</type>
+            </parameter>
+            <parameter>
+                <name>Keys</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ActionSendNonTextKey</name>
+            <comment>All non text &lt;a href="https://www.selenium.dev/selenium/docs/api/rb/Selenium/WebDriver/Keys.html"&gt;keys&lt;/a&gt;.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TakeScreenshotToFile</name>
+            <comment>Capture the screenshot (only visible part of the page) and store it in the specified location.
+ Format - "png" or "jpg"
+ Path - "c:\test.jpg"
+ &lt;code&gt;
+ Selenium.TakeScreenshotToFile("jpg", "c:\test.jpg")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByIDList</name>
+            <comment>Find all elements within the current page using ID.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ This method is affected by the 'implicit wait' times in force at the time of execution.
+ When implicitly waiting, this method will return as soon as there are more than 0 items in the found collection, or will return an empty list if the timeout is reached.
+ See &lt;a href="https://w3c.github.io/webdriver/#find-elements"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByCssSelectorWebElement</name>
+            <comment>Find elements via the driver's underlying W3C Selector engine.
+ If the browser does not implement the Selector API, a best effort is made to emulate the API.
+ In this case, we strive for at least CSS2 support, but offer no guarantees.
+ CssSelector – CSS expression.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>CssSelector</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByTagNameWebElement</name>
+            <comment>TagName – The element's tag name.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>TagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByClassNameWebElement</name>
+            <comment>Find element within the current page using Class Name.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SwitchToParentFrame</name>
+            <comment>Change focus to the parent context. If the current context is the top level browsing context, the context remains unchanged.
+ See &lt;a href="https://w3c.github.io/webdriver/#switch-to-parent-frame"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FindByIdWebElement</name>
+            <comment>Find element within the current page using ID.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByLinkTextWebElement</name>
+            <comment>FindByLinkText works on the link text as you see it with your eyes on the website (after all CSS is applied), not by the website source code.</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>LinkText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SwitchToFrame</name>
+            <comment>Select a frame by its Name or ID. Frames located by matching name attributes are always given precedence over those matched by ID.
+ Params: NameOrID – the name of the frame window, the id of the &lt;frame&gt; or &lt;iframe&gt; element, or the (zero-based) index.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>NameOrID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Title</name>
+            <comment>Get the title of the current page.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-title"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The title of the current page, with leading and trailing whitespace stripped, or null if one is not already set</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>FindByPartialLinkTextList</name>
+            <comment>FindByPartialLinkText works on the link text as you see it with your eyes on the website (after all CSS is applied), not by the website source code.
+ PartialLinkText – The partial text to match against.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>PartialLinkText</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PageSource</name>
+            <comment>Get the source of the last loaded page.
+ If the page has been modified after loading (for example, by Javascript)
+ there is no guarantee that the returned text is that of the modified page.
+ Please consult the documentation of the particular driver being used to determine whether the returned text
+ reflects the current state of the page or the text last sent by the web server.
+ The page source returned is a representation of the underlying DOM: do not expect it to be formatted or escaped
+ in the same way as the response sent from the web server. Think of it as an artist's impression.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-page-source"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The source of the current page.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>FindByTagNameList</name>
+            <comment>TagName – The element's tag name.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>TagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindByLinkTextList</name>
+            <comment>FindByLinkText works on the link text as you see it with your eyes on the website (after all CSS is applied), not by the website source code.
+ LinkText – The exact text to match against.
+ Attribute – The name of the attribute. Pass "" (empty string) if you dont need attribute.
+ Get the value of the given attribute of the element. Will return the current value, even if this has been modified after the page has been loaded.
+ More exactly, this method will return the value of the property with the given name, if it exists.
+ If it does not, then the value of the attribute with the given name is returned. If neither exists, null is returned.
+ The "style" attribute is converted as best can be to a text representation with a trailing semicolon.
+ The following are deemed to be "boolean" attributes, and will return either "true" or null:
+ async, autofocus, autoplay, checked, compact, complete, controls, declare, defaultchecked,
+ defaultselected, defer, disabled, draggable, ended, formnovalidate, hidden, indeterminate, iscontenteditable,
+ ismap, itemscope, loop, multiple, muted, nohref, noresize, noshade, novalidate, nowrap, open, paused, pubdate,
+ readonly, required, reversed, scoped, seamless, seeking, selected, truespeed, willvalidate.
+ Finally, the following commonly mis-capitalized attribute/property names are evaluated as expected:
+ If the given name is "class", the "className" property is returned.
+ If the given name is "readonly", the "readOnly" property is returned.
+ Note: The reason for this behavior is that users frequently confuse attributes and properties.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-element-attribute"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: List of Pnd_DataWebElement</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>LinkText</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Attribute</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Load a new web page in the current browser window.
+ This is done using an HTTP POST operation, and the method will block until the load is complete with the default 'page load strategy'.
+ This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.
+ Should a meta-redirect "rest" for any duration of time, it is best to wait until this timeout is over,
+ since should the underlying page change whilst your test is executing the results of future calls against this interface will be against the freshly loaded page.
+ See &lt;a href="https://w3c.github.io/webdriver/#navigate-to"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the current window, quitting the browser if it's the last window currently open.
+ See &lt;a href="https://w3c.github.io/webdriver/#close-window"&gt;W3C WebDriver specification&lt;/a&gt; for more details.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FindByXpathWebElement</name>
+            <comment>Path – The XPath to use.
+ Returns: Object of WebElement</comment>
+            <returntype>org.openqa.selenium.WebElement</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CurrentUrl</name>
+            <comment>Get a string representing the current URL that the browser is looking at.
+ See &lt;a href="https://w3c.github.io/webdriver/#get-current-url"&gt;W3C WebDriver specification&lt;/a&gt; for more details.
+ Returns: The URL of the page currently loaded in the browser</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <version>0.6</version>
+    <author>Author: selenium.dev - B4j Wrapper: Pendrush</author>
+    <dependsOn>kotlin-selenium-all</dependsOn>
+</root>

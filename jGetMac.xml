@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>giga.getMac_getMac.GetMACAddress</name>
+        <shortname>jGetMac</shortname>
+        <owner>process</owner>
+        <event>getMacAddressFromClient ()</event>
+        <event>getMacAddress()</event>
+        <permission>android.permission.INTERNET</permission>
+        <property>
+            <name>MacAddressFromClient</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets Mac Address From the client Set it as Read only from String
+Example Dim mac As JGetMac
+ Dim S As String
+ S = mac.getmacAddressFromClient
+ lbl1.Text = S</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>giga</author>
+</root>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>butt.droid.nativeHook.JavaNativeKeyEvent</name>
+        <shortname>NativeKeyEvent</shortname>
+        <owner>process</owner>
+        <property>
+            <name>KeyText</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>KeyCode</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>butt.droid.nativeHook.JavaNativeMouseEvent</name>
+        <shortname>NativeMouseEvent</shortname>
+        <owner>process</owner>
+        <property>
+            <name>ClickCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>X</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Y</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MouseButton</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>butt.droid.nativeHook.JavaNativeMouseWheelEvent</name>
+        <shortname>NativeMouseWheelEvent</shortname>
+        <owner>process</owner>
+        <property>
+            <name>WheelRotation</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScrollType</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScrollAmount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>butt.droid.nativeHook.NativeHook</name>
+        <shortname>NativeHook</shortname>
+        <owner>process</owner>
+        <event>NativeKeyPressed(nke as NativeKeyEvent) As Boolean</event>
+        <event>NativeKeyReleased(nke as NativeKeyEvent) As Boolean</event>
+        <event>NativeMouseMoved(nme as NativeMouseEvent) As Boolean</event>
+        <event>NativeMouseWheelMoved(nmwe as NativeMouseWheelEvent) As Boolean</event>
+        <event>NativeMouseClicked(nme as NativeMouseEvent) As Boolean</event>
+        <event>NativeMouseDragged(nme as NativeMouseEvent) As Boolean</event>
+        <event>NativeMousePressed(nme as NativeMouseEvent) As Boolean</event>
+        <event>NativeMouseReleased(nme as NativeMouseEvent) As Boolean</event>
+        <event>Unregistered</event>
+        <method>
+            <name>startNativeMouseWheelListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>endNativeMouseMotionListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Registers the NativeHook. Returns a reference to the Me jNativeHook Object. Starts the NativeHook event loop.
+ Be sure to unregister the NativeHook when done using the NativeHook by calling unregisterNativeHook().
+ Will throw a NativeHookException if it can't be registered. 
+ Next, start the individual NativeListeners you require. 
+ If you wish to consume event, call EnableEventConsumption().
+ If you want to filter MouseMoved events, call setMouseMovedFilter().</comment>
+            <returntype>butt.droid.nativeHook.NativeHook</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Module</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>disableKillCode</name>
+            <comment>If you press left_windows_key and then Escape, and the KillCode is active, 
+ the NativeHook will unregister and all event listeners will end.
+ Call this Sub to disable use of this KillCode.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>EnableEventConsumption</name>
+            <comment>Call this to enable consuming events. If you consume an event, it will not propagate through
+ the system to other programs, including the program in focus. In order to consume an event 
+ from with that event's event sub, return True in that sub.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>endNativeKeyListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>startNativeMouseMotionListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isSpecialKey</name>
+            <comment>Returns true if the key can be held down in conjunction with other keys for special key combos
+ (for example, alt, ctrl, windows key, shift, etc...).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>keyCode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>keyCodeToTextRepresentation</name>
+            <comment>Returns the text representation of a given keyCode</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>keyCode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>enableKillCode</name>
+            <comment>If you press left_windows_key and then Escape, and the KillCode is active, 
+ the NativeHook will unregister and all event listeners will end.
+ Call this Sub to enable use of this KillCode.
+ The KillCode is disabled by default.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>startNativeKeyListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>startNativeMouseInputListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isCharacter</name>
+            <comment>Returns true if the primary function of the key with the corresponding keyCode is a letter, number or punctuation mark.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>keyCode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unregisterNativeHook</name>
+            <comment>Unregisters the NativeHook. Ends the NativeHook event loop.
+ Throws a NativeHookException if unregistering fails.
+ Throws other exceptions if it fails to raise the _Unregistered event.
+ If the NativeHook is the only event loop (for example, no UI event loop, no server event loop, etc...)
+ then unregistering the NativeHook will end the program (no more events, no more code to execute) unless you 
+ implement the _Unregistered event and continue execution from there.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isKillCodeEnabled</name>
+            <comment>If you press left_windows_key and then Escape, and the KillCode is active, 
+ the NativeHook will unregister and all event listeners will end.
+ Call this Sub to get the activation status of the KillCode.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>endNativeMouseWheelListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>endNativeMouseInputListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>MouseMovedFilter</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>mouseMovedFilter</name>
+                <type>int</type>
+            </parameter>
+            <comment>On modern systems, MouseMoved events might fire more often than is convenient.
+ Setting mouseMovedFilter to N will make it so that only 1 in N MouseMoved events is reported. 
+ By default, mouseMovedFilter=1 so that all events are reported. 
+ This filtering also applies to MouseDragged events.
+ NOTE: If you are consuming MouseMoved events and you have set mouseMovedFilter to something
+ other than 1, you will only be able to consume the events that are reported. 
+ If you need to be able to consume all MouseMoved events, keep filtering at 1.</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <dependsOn>JNativeHook</dependsOn>
+</root>

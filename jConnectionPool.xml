@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4j.object.ConnectionPool</name>
+        <shortname>ConnectionPool</shortname>
+        <comment>Maintains a pool of database connections.</comment>
+        <objectwrapper>com.mchange.v2.c3p0.ComboPooledDataSource</objectwrapper>
+        <owner>process</owner>
+        <event>ConnectionReady (Success As Boolean, SQL As SQL)</event>
+        <method>
+            <name>GetConnection</name>
+            <comment>Retrieves a connection from the pool. Make sure to close the connection when you are done with it.</comment>
+            <returntype>anywheresoftware.b4j.objects.SQL</returntype>
+        </method>
+        <method>
+            <name>GetConnectionAsync</name>
+            <comment>Asynchronously gets a SQL connection. This method is useful in UI applications as it prevents the main thread from freezing until the connection is available.
+The ConnectionReady event will be raised when the connection is ready.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClosePool</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the pool.
+DriverClass - The JDBC driver class.
+JdbcUrl - JDBC connection url.
+User / Password - Connection credentials.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DriverClass</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>JdbcUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>User</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>3.0</version>
+    <dependsOn>c3p0-0.9.5.2</dependsOn>
+    <dependsOn>c3p0-oracle-thin-extras-0.9.5.2</dependsOn>
+    <dependsOn>mchange-commons-java-0.2.11</dependsOn>    
+</root>
